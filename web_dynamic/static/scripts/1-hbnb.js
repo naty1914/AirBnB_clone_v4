@@ -1,17 +1,16 @@
 $(document).ready(function () {
   $('input[type=checkbox]').click(function () {
-    const list_of_name = [];
-    const data_id = [];
+    const listName = [];
+    const dataId = [];
     $('input[type=checkbox]:checked').each(function () {
-      list_of_name.push($(this).attr('data-name'));
-      data_id.push($(this).attr('data-id'));
+      listName.push($(this).attr('data-name'));
+      dataId.push($(this).attr('data-id'));
     });
-    if (myListName.length === 0) {
+    if (listName.length === 0) {
       $('.amenities h4').html('&nbsp;');
     } else {
-      $('.amenities h4').text(myListName.join(', '));
+      $('.amenities h4').text(listName.join(', '));
     }
-    console.log(myId);
+    console.log(dataId);
   });
 });
-
